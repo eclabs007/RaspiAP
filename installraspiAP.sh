@@ -1,5 +1,41 @@
 #!/bin/bash
 #
+#!/bin/bash
+#
+# RaspAP Quick Installer
+# Author: @billz <billzimmerman@gmail.com>
+# License: GNU General Public License v3.0
+#
+# Usage:
+#
+# -y, --yes, --assume-yes
+#    Assume "yes" as answer to all prompts and run non-interactively
+# c, --cert, --certficate
+#    Installs mkcert and generates an SSL certificate for lighttpd
+# -o, --openvpn <flag>
+#    Used with -y, --yes, sets OpenVPN install option (0=no install)
+# -a, --adblock <flag>
+#    Used with -y, --yes, sets Adblock install option (0=no install)
+# -r, --repo, --repository <name>
+#    Overrides the default GitHub repo (billz/raspap-webgui)
+# -b, --branch <name>
+#    Overrides the default git branch (master)
+# -h, --help
+#    Outputs usage notes and exits
+# -u, --upgrade
+#    Upgrades an existing installation to the latest release version
+# -v, --version
+#    Outputs release info and exits
+#
+# Depending on options passed to the installer, ONE of the following
+# additional shell scripts will be downloaded and sourced:
+#
+# https://raw.githubusercontent.com/billz/raspap-webgui/master/installers/common.sh
+# - or -
+# https://raw.githubusercontent.com/billz/raspap-webgui/master/installers/mkcert.sh
+#
+# You are not obligated to bundle the LICENSE file with your RaspAP projects as long
+# as you leave these references intact in the header comments of your source files.
 # RaspAP Quick Installer
 
 #
